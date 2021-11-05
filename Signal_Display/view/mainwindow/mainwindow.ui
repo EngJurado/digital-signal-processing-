@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1366</width>
+    <height>768</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>8</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Signal Display</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Time</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <widget class="QGraphicsView" name="viewtime"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Peridogram</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <widget class="QGraphicsView" name="viewfrequency"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>Spectrogram</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0">
+         <widget class="QGraphicsView" name="viewspectrogram"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1366</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuAbrir">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+   </widget>
+   <widget class="QMenu" name="menuSampling_rate">
+    <property name="title">
+     <string>Sampling rate</string>
+    </property>
+    <addaction name="actionSet_sampling_rate"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="actionClear_sampling_rate"/>
+   </widget>
+   <widget class="QMenu" name="menuPeridogram">
+    <property name="title">
+     <string>Peridogram</string>
+    </property>
+    <addaction name="actionFast_Fourier_Transform"/>
+    <addaction name="actionWelch"/>
+    <addaction name="separator"/>
+    <addaction name="actionDisable_periodogram"/>
+   </widget>
+   <widget class="QMenu" name="menuSpectrogram">
+    <property name="title">
+     <string>Spectrogram</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionSe_spectrogram"/>
+    <addaction name="separator"/>
+    <addaction name="actionDisable_spectrogram"/>
+   </widget>
+   <addaction name="menuAbrir"/>
+   <addaction name="menuSampling_rate"/>
+   <addaction name="menuPeridogram"/>
+   <addaction name="menuSpectrogram"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionSet_sampling_rate">
+   <property name="text">
+    <string>Set sampling rate</string>
+   </property>
+  </action>
+  <action name="actionClear_sampling_rate">
+   <property name="text">
+    <string>Disable sampling rate</string>
+   </property>
+  </action>
+  <action name="actionFast_Fourier_Transform">
+   <property name="text">
+    <string>Fast Fourier Transform</string>
+   </property>
+  </action>
+  <action name="actionWelch">
+   <property name="text">
+    <string>Welch</string>
+   </property>
+  </action>
+  <action name="actionDisable_periodogram">
+   <property name="text">
+    <string>Disable periodogram</string>
+   </property>
+  </action>
+  <action name="actionSe_spectrogram">
+   <property name="text">
+    <string>Set spectrogram</string>
+   </property>
+  </action>
+  <action name="actionDisable_spectrogram">
+   <property name="text">
+    <string>Disable spectrogram</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
